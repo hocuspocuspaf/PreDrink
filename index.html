@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PreDrink UI Prototype</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="PreDrink start">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-bottle"></span>
+        </span>
+        <span class="brand-word">PreDrink</span>
+      </a>
+
+      <nav class="top-actions" aria-label="Snelle acties">
+        <span class="room-state-chip" id="top-room-state">Geen kamer</span>
+        <button class="icon-button" title="Geluid" aria-label="Geluid">
+          <span class="icon sound-icon" aria-hidden="true"></span>
+        </button>
+        <button class="icon-button" title="Thema" aria-label="Thema">
+          <span class="icon theme-icon" aria-hidden="true"></span>
+        </button>
+        <span class="age-chip">18+</span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="party-band" aria-labelledby="brand-title">
+        <div class="party-copy">
+          <p class="eyebrow">Feestkamer</p>
+          <h1 id="brand-title">PreDrink</h1>
+          <p class="lead">Scan de QR, kies de vibe, start de ronde. Iedereen speelt op zijn eigen telefoon.</p>
+
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-open-flow="create" onclick="window.PreDrinkFlow && window.PreDrinkFlow.open('create')">
+              <span class="plus-icon" aria-hidden="true"></span>
+              Maak kamer
+            </button>
+            <button class="secondary-button" type="button" data-open-flow="join" onclick="window.PreDrinkFlow && window.PreDrinkFlow.open('join')">Code invoeren</button>
+          </div>
+        </div>
+
+        <aside class="room-preview" aria-label="Kamervoorbeeld">
+          <div class="room-preview-head">
+            <div>
+              <p class="mini-label">Live kamer</p>
+              <strong id="room-code">KOT-204</strong>
+            </div>
+            <span class="status-dot" id="room-status">Voorbeeld</span>
+          </div>
+
+          <div class="qr-tile" aria-label="QR code voorbeeld">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+
+          <div class="player-row" aria-label="Spelers">
+            <span class="avatar a1">M</span>
+            <span class="avatar a2">L</span>
+            <span class="avatar a3">S</span>
+            <span class="avatar a4">N</span>
+            <span class="avatar more" id="player-count">+4</span>
+          </div>
+
+          <div class="room-controls">
+            <button class="mini-button" type="button" id="room-start-btn">Start spel</button>
+            <button class="mini-icon-button" title="Kamerinstellingen" aria-label="Kamerinstellingen">
+              <span class="settings-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </aside>
+      </section>
+
+      <section class="room-strip" aria-label="Kamerstatus">
+        <div>
+          <span class="mini-label">Kamer</span>
+          <strong id="strip-room">Nog niet live</strong>
+        </div>
+        <div>
+          <span class="mini-label">Sfeer</span>
+          <strong id="strip-vibe">Grappig</strong>
+        </div>
+        <div>
+          <span class="mini-label">Spelers</span>
+          <strong id="strip-players">Organisator + 7</strong>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <aside class="side-panel" aria-label="Kamerinstellingen">
+          <div class="panel-block host-card">
+            <div class="panel-heading">
+              <p class="mini-label">Organisator</p>
+              <span class="small-badge">Demo</span>
+            </div>
+            <label class="field-label" for="host-name">Naam</label>
+            <input class="text-field" id="host-name" type="text" value="Mila" maxlength="18">
+            <label class="field-label" for="room-name">Kamernaam</label>
+            <input class="text-field" id="room-name" type="text" value="Vrijdag predrink" maxlength="24">
+          </div>
+
+          <div class="panel-block">
+            <div class="panel-heading">
+              <p class="mini-label">Sfeer</p>
+              <span class="small-badge">Organisator</span>
+            </div>
+
+            <div class="segmented" role="tablist" aria-label="Sfeerselectie">
+              <button class="segment active" type="button">Grappig</button>
+              <button class="segment" type="button">Ontspannen</button>
+              <button class="segment" type="button">Pittig</button>
+              <button class="segment" type="button">Zonder alcohol</button>
+            </div>
+          </div>
+
+        </aside>
+
+        <section class="game-library" aria-labelledby="games-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Spellen</p>
+              <h2 id="games-title">Kies de eerste ronde</h2>
+            </div>
+            <button class="icon-button dark" title="Filter" aria-label="Filter">
+              <span class="filter-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="game-grid">
+            <button class="game-card active" type="button" data-game="spin">
+              <span class="game-art bottle-art" aria-hidden="true"></span>
+              <span class="game-status">Geselecteerd</span>
+              <span class="game-kicker">2-12 spelers</span>
+              <strong>Flesje draaien</strong>
+              <span class="game-meta">Snelle keuzes, zachte chaos</span>
+            </button>
+
+            <button class="game-card" type="button" data-game="truth">
+              <span class="game-art card-art" aria-hidden="true"></span>
+              <span class="game-status">Vragen</span>
+              <span class="game-kicker">3-10 spelers</span>
+              <strong>Waarheid of drinken</strong>
+              <span class="game-meta">Vraag eerlijk of neem de uitweg</span>
+            </button>
+
+            <button class="game-card" type="button" data-game="never">
+              <span class="game-art stack-art" aria-hidden="true"></span>
+              <span class="game-status">Klassieker</span>
+              <span class="game-kicker">4-16 spelers</span>
+              <strong>Ik heb nog nooit</strong>
+              <span class="game-meta">Bekentenissen zonder lange uitleg</span>
+            </button>
+
+            <button class="game-card" type="button" data-game="likely">
+              <span class="game-art poll-art" aria-hidden="true"></span>
+              <span class="game-status">Stemmen</span>
+              <span class="game-kicker">4-16 spelers</span>
+              <strong>Wie zou het meest</strong>
+              <span class="game-meta">Stem op de meest waarschijnlijke</span>
+            </button>
+          </div>
+        </section>
+      </section>
+
+      <section class="play-stage" aria-labelledby="preview-title">
+        <div class="stage-head">
+          <div>
+            <p class="eyebrow">Voorbeeld</p>
+            <h2 id="preview-title">Flesje draaien</h2>
+          </div>
+          <div class="stage-actions">
+            <button class="icon-button dark" title="Vorige kaart" aria-label="Vorige kaart">
+              <span class="back-icon" aria-hidden="true"></span>
+            </button>
+            <button class="icon-button dark" title="Overslaan" aria-label="Overslaan">
+              <span class="skip-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="preview-board active" data-preview="spin">
+          <div class="bottle-table">
+            <span class="table-avatar p1">Mila</span>
+            <span class="table-avatar p2">Lex</span>
+            <span class="table-avatar p3">Noor</span>
+            <span class="table-avatar p4">Sam</span>
+            <span class="table-avatar p5">Bo</span>
+            <span class="table-avatar p6">Aya</span>
+            <div class="spin-bottle" aria-hidden="true"></div>
+          </div>
+          <div class="prompt-strip">
+            <span class="round-chip">Ronde 03</span>
+            <p>De fles kiest wie de volgende vraag krijgt.</p>
+          </div>
+        </div>
+
+        <div class="preview-board" data-preview="truth">
+          <div class="truth-card">
+            <span class="round-chip">Waarheid of drinken</span>
+            <h3>Wat is de laatste app die je meteen zou verbergen?</h3>
+            <div class="choice-row">
+              <button>Waarheid</button>
+              <button>Drinken</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-board" data-preview="never">
+          <div class="never-stack">
+            <article>
+              <span>Ik heb nog nooit</span>
+              <strong>een taxi genomen voor minder dan vijf minuten wandelen.</strong>
+            </article>
+            <article>
+              <span>Stem</span>
+              <strong>Ik wel</strong>
+            </article>
+            <article>
+              <span>Stem</span>
+              <strong>Nooit</strong>
+            </article>
+          </div>
+        </div>
+
+        <div class="preview-board" data-preview="likely">
+          <div class="poll-screen">
+            <span class="round-chip">Wie zou het meest</span>
+            <h3>Wie zou het meest spontaan een weekend boeken?</h3>
+            <div class="poll-list">
+              <div><span>Mila</span><strong style="width:72%"></strong></div>
+              <div><span>Lex</span><strong style="width:48%"></strong></div>
+              <div><span>Noor</span><strong style="width:28%"></strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-strip">
+          <button class="secondary-button">Grenzen</button>
+          <button class="primary-button" id="main-action">
+            <span class="play-icon" aria-hidden="true"></span>
+            <span id="main-action-label">Draaien</span>
+          </button>
+          <button class="secondary-button">Waterpauze</button>
+        </div>
+      </section>
+    </main>
+
+    <nav class="mobile-dock" aria-label="Mobiele navigatie">
+      <a href="#brand-title">Kamer</a>
+      <a href="#games-title">Spellen</a>
+      <a href="#preview-title">Spelen</a>
+    </nav>
+  </div>
+
+  <div class="flow-sheet" id="flow-sheet" aria-hidden="true">
+    <div class="sheet-backdrop" data-close-flow></div>
+    <section class="sheet-panel" aria-label="Kamerflow">
+      <div class="sheet-head">
+        <div>
+          <p class="eyebrow">Kamer</p>
+          <h2 id="sheet-title">Maak kamer</h2>
+        </div>
+        <button class="icon-button" type="button" title="Sluiten" aria-label="Sluiten" data-close-flow>
+          <span class="close-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="flow-tabs" role="tablist" aria-label="Kamerflow">
+        <button class="flow-tab active" type="button" data-flow-tab="create">Maken</button>
+        <button class="flow-tab" type="button" data-flow-tab="join">Meedoen</button>
+      </div>
+
+      <div class="flow-panel active" data-flow-panel="create">
+        <label class="field-label" for="sheet-room-name">Kamernaam</label>
+        <input class="text-field" id="sheet-room-name" type="text" value="Vrijdag predrink" maxlength="24">
+        <label class="field-label" for="sheet-host-name">Organisator</label>
+        <input class="text-field" id="sheet-host-name" type="text" value="Mila" maxlength="18">
+        <div class="sheet-actions">
+          <button class="primary-button" type="button" id="create-demo-room">
+            <span class="plus-icon" aria-hidden="true"></span>
+            Maak demo-kamer
+          </button>
+        </div>
+      </div>
+
+      <div class="flow-panel" data-flow-panel="join">
+        <label class="field-label" for="join-code">Kamercode</label>
+        <input class="text-field code-field" id="join-code" type="text" value="KOT-204" maxlength="7">
+        <label class="field-label" for="join-name">Naam</label>
+        <input class="text-field" id="join-name" type="text" value="Lex" maxlength="18">
+        <div class="sheet-actions">
+          <button class="primary-button" type="button" id="join-demo-room">
+            Doe mee met voorbeeld
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="./script.js?v=app-shell-3"></script>
+</body>
+</html>

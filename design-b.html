@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PreDrink Ontwerp B</title>
+  <link rel="stylesheet" href="./design-b.css">
+</head>
+<body>
+  <div class="ticker" aria-hidden="true">
+    <span>PreDrink / zachte chaos / blijf lief / waterpauze / geen schermafbeeldingen / PreDrink / zachte chaos / blijf lief / waterpauze / geen schermafbeeldingen /</span>
+  </div>
+
+  <main class="night-app">
+    <header class="nav">
+      <a class="brand" href="./index.html" aria-label="PreDrink ontwerp A">
+        <span class="brand-icon" aria-hidden="true"></span>
+        <span>PreDrink</span>
+      </a>
+
+      <div class="room-pill">
+        <span>ROOM</span>
+        <strong>PD-204</strong>
+      </div>
+
+      <nav class="nav-actions" aria-label="Snelle acties">
+        <button class="icon-button" title="Geluid" aria-label="Geluid"><span class="i-sound"></span></button>
+        <button class="icon-button" title="Grenzen" aria-label="Grenzen"><span class="i-shield"></span></button>
+        <button class="icon-button" title="Instellingen" aria-label="Instellingen"><span class="i-sliders"></span></button>
+      </nav>
+    </header>
+
+    <section class="command-grid">
+      <aside class="room-console" aria-label="Kamerconsole">
+        <div class="vertical-logo" aria-hidden="true">PREDRINK</div>
+
+        <section class="join-tile">
+          <div>
+            <p class="label">Meedoen</p>
+            <strong>Scan</strong>
+          </div>
+          <div class="qr-mosaic" aria-label="QR code voorbeeld">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </section>
+
+        <section class="vibe-panel">
+          <div class="panel-head">
+            <p class="label">Sfeer</p>
+            <span>Organisator</span>
+          </div>
+
+          <div class="vibe-stack" role="tablist" aria-label="Sfeer">
+            <button class="vibe active" type="button">Zachte chaos</button>
+            <button class="vibe" type="button">Beetje pittig</button>
+            <button class="vibe" type="button">Beste vrienden</button>
+            <button class="vibe" type="button">Zonder alcohol</button>
+          </div>
+        </section>
+
+        <section class="tempo-panel">
+          <p class="label">Tempo</p>
+          <div class="tempo-track" aria-label="Tempo">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="hot"></span>
+            <span class="hot"></span>
+          </div>
+          <div class="switch-line">
+            <span>Overslaan stemmen</span>
+            <button class="toggle on" aria-label="Overslaan stemmen aan"><span></span></button>
+          </div>
+          <div class="switch-line">
+            <span>Waterpauzes</span>
+            <button class="toggle on" aria-label="Waterpauzes aan"><span></span></button>
+          </div>
+        </section>
+      </aside>
+
+      <section class="stage" aria-labelledby="stage-title">
+        <div class="stage-top">
+          <div>
+            <p class="label">Nu bezig</p>
+            <h1 id="stage-title">Flesje draaien</h1>
+          </div>
+          <div class="round-counter">
+            <span>Ronde</span>
+            <strong>03</strong>
+          </div>
+        </div>
+
+        <div class="party-machine" data-selected="spin">
+          <div class="name-tag n1">Mila</div>
+          <div class="name-tag n2">Lex</div>
+          <div class="name-tag n3">Sam</div>
+          <div class="name-tag n4">Aya</div>
+          <div class="name-tag n5">Bo</div>
+          <div class="name-tag n6">Noor</div>
+
+          <div class="machine-ring">
+            <span class="ring-tick t1"></span>
+            <span class="ring-tick t2"></span>
+            <span class="ring-tick t3"></span>
+            <span class="ring-tick t4"></span>
+            <div class="live-art spin-art" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="prompt-console">
+          <span class="prompt-type" id="prompt-type">Fles kiest</span>
+          <p id="prompt-text">De fles kiest iemand. Die speler kiest truth, dare of pass.</p>
+        </div>
+
+        <div class="action-deck">
+          <button class="secondary-action">Grenzen</button>
+          <button class="main-action" id="main-action">Draaien</button>
+          <button class="secondary-action">Waterpauze</button>
+        </div>
+      </section>
+
+      <aside class="game-dock" aria-label="Spellen">
+        <div class="dock-head">
+          <p class="label">Spellen</p>
+          <span>4 geladen</span>
+        </div>
+
+        <button class="game-cartridge active" type="button" data-game="spin">
+          <span class="cart-icon cart-bottle" aria-hidden="true"></span>
+          <span>
+            <strong>Flesje draaien</strong>
+            <small>snel / fysiek</small>
+          </span>
+        </button>
+
+        <button class="game-cartridge" type="button" data-game="truth">
+          <span class="cart-icon cart-card" aria-hidden="true"></span>
+          <span>
+            <strong>Waarheid of drinken</strong>
+            <small>vragen / uitweg</small>
+          </span>
+        </button>
+
+        <button class="game-cartridge" type="button" data-game="never">
+          <span class="cart-icon cart-stack" aria-hidden="true"></span>
+          <span>
+            <strong>Ik heb nog nooit</strong>
+            <small>handen omhoog / onthullen</small>
+          </span>
+        </button>
+
+        <button class="game-cartridge" type="button" data-game="likely">
+          <span class="cart-icon cart-poll" aria-hidden="true"></span>
+          <span>
+            <strong>Wie zou het meest</strong>
+            <small>stemmen / onthullen</small>
+          </span>
+        </button>
+
+        <section class="phone-strip" aria-label="Telefoon preview">
+          <div class="phone-screen">
+            <span class="mini-status"></span>
+            <strong id="phone-title">Mila is aan de beurt</strong>
+            <p id="phone-copy">De fles gaat draaien</p>
+            <button>Klaar</button>
+          </div>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <script src="./design-b.js"></script>
+</body>
+</html>
