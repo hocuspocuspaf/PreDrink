@@ -15,17 +15,6 @@
         </span>
         <span class="brand-word">PreDrink</span>
       </a>
-
-      <nav class="top-actions" aria-label="Snelle acties">
-        <span class="room-state-chip" id="top-room-state">Geen kamer</span>
-        <button class="icon-button" title="Geluid" aria-label="Geluid">
-          <span class="icon sound-icon" aria-hidden="true"></span>
-        </button>
-        <button class="icon-button" title="Thema" aria-label="Thema">
-          <span class="icon theme-icon" aria-hidden="true"></span>
-        </button>
-        <span class="age-chip">18+</span>
-      </nav>
     </header>
 
     <main>
@@ -33,7 +22,7 @@
         <div class="party-copy">
           <p class="eyebrow">Feestkamer</p>
           <h1 id="brand-title">PreDrink</h1>
-          <p class="lead">Scan de QR, kies de vibe, start de ronde. Iedereen speelt op zijn eigen telefoon.</p>
+          <p class="lead">Scan de QR, kies de sfeer, start de ronde. Iedereen speelt op zijn eigen telefoon.</p>
 
           <div class="hero-actions">
             <button class="primary-button" type="button" data-open-flow="create" onclick="window.PreDrinkFlow && window.PreDrinkFlow.open('create')">
@@ -60,6 +49,7 @@
             <span></span><span></span><span></span><span></span>
           </div>
 
+          <p class="mini-label room-player-label">Spelers in de kamer</p>
           <div class="player-row" aria-label="Spelers">
             <span class="avatar a1">M</span>
             <span class="avatar a2">L</span>
@@ -84,7 +74,7 @@
         </div>
         <div>
           <span class="mini-label">Sfeer</span>
-          <strong id="strip-vibe">Grappig</strong>
+          <strong id="strip-vibe">+18</strong>
         </div>
         <div>
           <span class="mini-label">Spelers</span>
@@ -100,7 +90,7 @@
               <span class="small-badge">Demo</span>
             </div>
             <label class="field-label" for="host-name">Naam</label>
-            <input class="text-field" id="host-name" type="text" value="Mila" maxlength="18">
+            <input class="text-field" id="host-name" type="text" value="Benji" maxlength="18">
             <label class="field-label" for="room-name">Kamernaam</label>
             <input class="text-field" id="room-name" type="text" value="Vrijdag predrink" maxlength="24">
           </div>
@@ -112,10 +102,9 @@
             </div>
 
             <div class="segmented" role="tablist" aria-label="Sfeerselectie">
-              <button class="segment active" type="button">Grappig</button>
-              <button class="segment" type="button">Ontspannen</button>
-              <button class="segment" type="button">Pittig</button>
-              <button class="segment" type="button">Zonder alcohol</button>
+              <button class="segment active" type="button">+18</button>
+              <button class="segment" type="button">Grappig</button>
+              <button class="segment" type="button">Persoonlijk</button>
             </div>
           </div>
 
@@ -186,7 +175,7 @@
 
         <div class="preview-board active" data-preview="spin">
           <div class="bottle-table">
-            <span class="table-avatar p1">Mila</span>
+            <span class="table-avatar p1">Benji</span>
             <span class="table-avatar p2">Lex</span>
             <span class="table-avatar p3">Noor</span>
             <span class="table-avatar p4">Sam</span>
@@ -233,7 +222,7 @@
             <span class="round-chip">Wie zou het meest</span>
             <h3>Wie zou het meest spontaan een weekend boeken?</h3>
             <div class="poll-list">
-              <div><span>Mila</span><strong style="width:72%"></strong></div>
+              <div><span>Benji</span><strong style="width:72%"></strong></div>
               <div><span>Lex</span><strong style="width:48%"></strong></div>
               <div><span>Noor</span><strong style="width:28%"></strong></div>
             </div>
@@ -280,7 +269,7 @@
         <label class="field-label" for="sheet-room-name">Kamernaam</label>
         <input class="text-field" id="sheet-room-name" type="text" value="Vrijdag predrink" maxlength="24">
         <label class="field-label" for="sheet-host-name">Organisator</label>
-        <input class="text-field" id="sheet-host-name" type="text" value="Mila" maxlength="18">
+        <input class="text-field" id="sheet-host-name" type="text" value="Benji" maxlength="18">
         <div class="sheet-actions">
           <button class="primary-button" type="button" id="create-demo-room">
             <span class="plus-icon" aria-hidden="true"></span>

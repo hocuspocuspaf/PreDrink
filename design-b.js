@@ -4,7 +4,7 @@ const games = {
     type: "Fles kiest",
     prompt: "De fles kiest iemand. Die speler kiest waarheid, opdracht of passen.",
     action: "Draaien",
-    phoneTitle: "Mila is aan de beurt",
+    phoneTitle: "Benji is aan de beurt",
     phoneCopy: "De fles gaat draaien"
   },
   truth: {

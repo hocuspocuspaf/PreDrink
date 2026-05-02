@@ -5,7 +5,6 @@ const mainAction = document.getElementById("main-action");
 const mainActionLabel = document.getElementById("main-action-label");
 const sheet = document.getElementById("flow-sheet");
 const sheetTitle = document.getElementById("sheet-title");
-const topRoomState = document.getElementById("top-room-state");
 const roomCode = document.getElementById("room-code");
 const roomStatus = document.getElementById("room-status");
 const playerCount = document.getElementById("player-count");
@@ -101,8 +100,6 @@ function activateRoom(code, joined = false) {
   roomCode.textContent = cleanCode;
   roomStatus.textContent = joined ? "Aangemeld" : "Live";
   roomStatus.classList.add("live");
-  topRoomState.textContent = cleanCode;
-  topRoomState.classList.add("live");
   stripRoom.textContent = cleanCode;
   stripPlayers.textContent = joined ? "Organisator + 8" : "Organisator + 7";
   playerCount.textContent = joined ? "+5" : "+4";
@@ -144,7 +141,6 @@ document.querySelectorAll("[data-open-flow]").forEach((button) => {
 
 roomStart.addEventListener("click", () => {
   roomStatus.textContent = "Bezig";
-  topRoomState.textContent = `${roomCode.textContent} live`;
   roomStart.textContent = "Volgende ronde";
   document.getElementById("preview-title").scrollIntoView({ behavior: "smooth", block: "start" });
 });
